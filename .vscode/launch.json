@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainICAP",
+      "request": "launch",
+      "mainClass": "MainICAP",
+      "projectName": "email_proyecto_5400c92c"
+    },
+    {
+      "type": "java",
+      "name": "MainICAP",
+      "request": "launch",
+      "mainClass": "MainICAP",
+      "projectName": "email_proyecto"
+    }
+  ]
+}
+
