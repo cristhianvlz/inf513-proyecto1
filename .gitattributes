@@ -1,0 +1,3 @@
+# run.sh se ejecuta en Linux: siempre con fin de línea LF, aunque se edite en Windows
+*.sh text eol=lf
+*.bat text eol=crlf

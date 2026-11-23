@@ -1,0 +1,24 @@
+# Clases compiladas (se generan con run.bat o run.sh)
+*.class
+bin/
+
+# Configuración con las claves de la base y del correo (el modelo es icap.properties.ejemplo)
+icap.properties
+
+# Datos que genera el sistema al ejecutarse
+documentos/
+logs/
+correos_procesados.txt
+avisos_cupo_minimo.txt
+pasarela_simulada.txt
+pasarela_simulada.txt.tmp
+mainicap.lock
+respuesta_icap.html
+
+# Fuentes de Windows para el título (licencia de Microsoft: se copian a mano, no se publican)
+recursos/fuentes/
+
+# Respaldos de la base (datos personales y claves cifradas): deploy/RespaldoBD.java
+respaldo/
+# Archivos temporales de Word y PowerPoint
+~$*

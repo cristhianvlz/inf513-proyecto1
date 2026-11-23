@@ -1,0 +1,18 @@
+# Servicio systemd del Sistema ICAP en el VPS.
+# Instalación (ver README.md): sudo cp deploy/icap.service /etc/systemd/system/ && sudo systemctl enable --now icap
+[Unit]
+Description=Sistema ICAP por correo electronico (Grupo 15 SC)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=icap
+WorkingDirectory=/opt/icap
+Environment=TZ=America/La_Paz
+ExecStart=/opt/icap/run.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

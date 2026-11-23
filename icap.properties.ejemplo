@@ -1,0 +1,28 @@
+# Modelo de configuración del Sistema ICAP.
+# Copie este archivo como icap.properties y complete las claves. icap.properties no se sube a GitHub.
+# Cada valor también puede venir de una variable de entorno: db.clave -> ICAP_DB_CLAVE, correo.clave -> ICAP_CORREO_CLAVE
+
+# Base de datos PostgreSQL de la cátedra
+db.url=jdbc:postgresql://db.tecnoweb.org.bo:5432/db_grupoXXsa
+db.usuario=grupoXXsa
+db.clave=CAMBIAR
+
+# Buzón del grupo: POP3 para leer los comandos y SMTP para responder
+correo.servidor=mail.tecnoweb.org.bo
+correo.usuario=grupoXXsa
+correo.clave=CAMBIAR
+correo.direccion=grupoXXsa@tecnoweb.org.bo
+correo.pop3.puerto=110
+correo.smtp.puerto=25
+
+# Zona horaria de las fechas del sistema (en un VPS el reloj suele estar en UTC)
+zona.horaria=America/La_Paz
+
+# Pasarela de pago (CU-04, comando GENPAGO). "simulada" no cobra dinero real: guarda las órdenes en
+# pasarela_simulada.txt y el pago se simula con: java -cp . deploy/SimularPago.java <orden>
+# Cuando haya API del proveedor, se agrega su clase en src/comunicacion y se pone su nombre aquí
+pasarela.proveedor=simulada
+# Horas que dura una orden sin pagar antes de vencer
+pasarela.vigencia_horas=24
+# Cada cuántos segundos MainICAP pregunta a la pasarela por las órdenes sin pagar
+pasarela.revision_segundos=30

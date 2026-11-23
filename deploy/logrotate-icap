@@ -1,0 +1,10 @@
+# Rotación semanal de logs/access.log y logs/error.log en el VPS.
+# Instalación: sudo cp deploy/logrotate-icap /etc/logrotate.d/icap
+/opt/icap/logs/*.log {
+    weekly
+    rotate 8
+    compress
+    missingok
+    notifempty
+    copytruncate
+}
